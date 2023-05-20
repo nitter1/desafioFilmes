@@ -5,11 +5,10 @@ export const HeaderContainer = styled.header`
     justify-content:center;
     align-items:center;
     position:fixed;
-    background-color: rgba(108, 122, 137 / 1) ;
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
     width:100%;
     height:12vh;
-    border: solid red;
     
     div {
     display: flex;
@@ -22,13 +21,13 @@ export const HeaderContainer = styled.header`
 export const NavItems = styled.nav`
     flex-grow: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 `
 export const Ul = styled.ul`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:center;
-    width: 100%;
+    width: 25%;
     li{
         list-style: none;
         
@@ -37,10 +36,36 @@ export const Ul = styled.ul`
     a{
         text-decoration:none;
         color:white;
-        font-size:1.2rem;
+        -webkit-text-stroke-width: 0.6px;
+        -webkit-text-stroke-color: #000;
+        font-size:1.5rem;
+        font-weight: 700;
+        font-family: "Open Sans", Tahoma, Verdana, sans-serif;
     }
 `
 
+export const UlTwo = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 20%;
+    li{
+        list-style: none;
+        
+    }
+
+    a{
+        text-decoration:none;
+        color:white;
+        -webkit-text-stroke-width: 0.6px;
+        -webkit-text-stroke-color: #000;
+        font-size:1.5rem;
+        font-weight: 700;
+        font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+    }
+`
+
+
 export const Logo = styled.div`
-border: solid red;
+margin-left: 1rem;
 `
