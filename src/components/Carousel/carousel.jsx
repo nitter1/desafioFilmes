@@ -1,25 +1,60 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
+import styled from "styled-components";
 
-export default function Carousel({ filmes }) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
+const SliderBox = styled.section`
+  height: 70vh;
+  padding: 1rem;
+  border: 2px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #f2f2f2;
+`;
+
+const CarTitle = styled.h5`
+color: white;
+`
+
+export default function Carousel() {
+  const [filmes, setFilmes] = useState([]);
+
+  const getApi = () => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/popular?api_key=34635a3c54d72514d08fd6979b14e222&language=pt-Br&page=1"
+      )
+      .then((response) => {
+        setFilmes(response.data.results);
+      });
   };
 
+  useEffect(() => {
+    getApi();
+  }, []);
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  };
   return (
-    <Slider {...settings}>
-      {filmes.map((filme, index) => (
-        <div key={index}>
-          <img src={filme.image} alt={filme.title} />
-          <h3>{filme.title}</h3>
-        </div>
-      ))}
-    </Slider>
+    <SliderBox>
+      <Slider {...settings} style={{ width: "95%" }}>
+        {filmes.map((item) => (
+          <div>
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+              alt={item.title}
+              style={{ width: "80%" }}
+            />
+            <CarTitle>{item.title} </CarTitle>
+          </div>
+        ))}
+      </Slider>
+    </SliderBox>
   );
 }

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import * as S from './filmes_style.jsx'
 import axios from 'axios'
-import Carousel from "../Carousel/carousel.jsx"
 
 export default function Filmes() {
     const [filmes, setFilmes] = useState([])
@@ -28,7 +27,6 @@ export default function Filmes() {
 
 
     return (    <>
-                <Carousel filmes={filmes}/>
                 <S.Container id="filmes">
             {filmes.map((item, index) => (
                 <S.BoxFilms key={index}>
@@ -46,7 +44,6 @@ export default function Filmes() {
       </button>
     </div>
         </S.Container>
-
         </>
     )
 }

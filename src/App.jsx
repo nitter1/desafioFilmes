@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components"
 import Header from "./components/Header/header.jsx"
 import Main from "./components/Main/main.jsx"
 import Filmes from "./components/Filmes/filmes.jsx"
+import Carousel from "./components/Carousel/carousel.jsx"
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -19,6 +20,7 @@ export default function App() {
     <>
     <Header />
     <Main />
+    <Carousel />
     <Filmes />
     <GlobalStyle />
     </>
