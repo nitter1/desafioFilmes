@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Imdb from "../../assets/imdb.svg"
 import axios from 'axios';
 import * as S from "./main_style"
 export default function Main() {
@@ -32,20 +33,20 @@ export default function Main() {
 
     return (
         <>
-        <S.ContainerMain background={fundo.map(item => item.poster)} id="main">
-            {fundo.map(item => (
-                <S.BoxTitle>
-                    <S.Title>{item.title}</S.Title>
-                    <S.ReleaseTitle>Lançamento: {item.release_year}</S.ReleaseTitle>
-                    <S.VoteTitle>Avaliação IMDb: {item.vote_average}/10 <FontAwesomeIcon icon={faStar} style={{color: "#ffd43b",}} /></S.VoteTitle>
-                    <S.OverviewTitle>Sinopse: {item.overview}</S.OverviewTitle>
-                    <S.ButtonDiv>
-                    <S.ButtonAssistir> <FontAwesomeIcon icon={faPlay} /> Assitir Agora </S.ButtonAssistir>
-                <S.ButtonTrailer> <FontAwesomeIcon icon={faFilm} /> Trailer </S.ButtonTrailer>
-                </S.ButtonDiv>
-                </S.BoxTitle>
-            ))}
-        </S.ContainerMain>
+            <S.ContainerMain background={fundo.map(item => item.poster)} id="main">
+                {fundo.map(item => (
+                    <S.BoxTitle>
+                        <S.Title>{item.title}</S.Title>
+                        <S.ReleaseTitle>Lançamento: {item.release_year}</S.ReleaseTitle>
+                        <S.VoteTitle>Avaliação IMDb: {item.vote_average}/10 <FontAwesomeIcon icon={faStar} style={{ color: "#ffd43b", }} /></S.VoteTitle>
+                        <S.OverviewTitle>Sinopse: {item.overview}</S.OverviewTitle>
+                        <S.ButtonDiv>
+                            <S.ButtonAssistir> <FontAwesomeIcon icon={faPlay} /> Assitir Agora </S.ButtonAssistir>
+                            <S.ButtonTrailer> <FontAwesomeIcon icon={faFilm} /> Trailer </S.ButtonTrailer>
+                        </S.ButtonDiv>
+                    </S.BoxTitle>
+                ))}
+            </S.ContainerMain>
         </>
     )
 }
