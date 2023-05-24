@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import * as S from "./main_style"
 export default function Main() {
@@ -36,7 +37,7 @@ export default function Main() {
                 <S.BoxTitle>
                     <S.Title>{item.title}</S.Title>
                     <S.ReleaseTitle>Lançamento: {item.release_year}</S.ReleaseTitle>
-                    <S.VoteTitle>Avaliação: {item.vote_average}/10</S.VoteTitle>
+                    <S.VoteTitle>Avaliação IMDb: {item.vote_average}/10 <FontAwesomeIcon icon={faStar} style={{color: "#ffd43b",}} /></S.VoteTitle>
                     <S.OverviewTitle>Sinopse: {item.overview}</S.OverviewTitle>
                     <S.ButtonDiv>
                     <S.ButtonAssistir> <FontAwesomeIcon icon={faPlay} /> Assitir Agora </S.ButtonAssistir>

@@ -43,6 +43,8 @@ font-family: "Open Sans", Tahoma, Verdana, sans-serif;
 font-size: 0.8rem;
 width: 60%;
 margin-left: 3rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
 `
 
 export const ButtonDiv = styled.div`
@@ -50,6 +52,7 @@ margin: 1rem;
 width: 35%;
 display: flex;
 justify-content: space-evenly;
+padding-bottom: 3rem;
 `;
 export const ButtonAssistir = styled.button`
   width: 15vw;
