@@ -27,7 +27,7 @@ export const Ul = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 25%;
+    width: 35%;
     li{
         list-style: none;
         transition: all 0.3s ease;
@@ -36,7 +36,6 @@ export const Ul = styled.ul`
     cursor: pointer;
     background: #5a5a5a;
     border-radius: 25px;
-    width: 50%;
   }
     }
 
@@ -55,7 +54,7 @@ export const UlTwo = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 20%;
+    width: 35%;
     li{
         list-style: none;
         transition: all 0.3s ease;
@@ -64,7 +63,6 @@ export const UlTwo = styled.ul`
     cursor: pointer;
     background: #5a5a5a;
     border-radius: 25px;
-    width: 50%;
   }
         
     }
