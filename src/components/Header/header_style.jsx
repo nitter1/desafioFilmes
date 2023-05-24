@@ -28,7 +28,6 @@ export const Ul = styled.ul`
     justify-content: space-between;
     align-items:center;
     width: 25%;
-    border-radius: 25px;
     li{
         list-style: none;
         transition: all 0.3s ease;
@@ -56,7 +55,6 @@ export const UlTwo = styled.ul`
     justify-content: space-between;
     align-items:center;
     width: 25%;
-    border-radius: 25px;
     li{
         list-style: none;
         transition: all 0.3s ease;
