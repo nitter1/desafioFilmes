@@ -18,6 +18,12 @@ const CarTitle = styled.h5`
 color: white;
 `
 
+const Title = styled.h2`
+color: white;
+background-color: black;
+padding-left: 1.5rem;
+`
+
 export default function Carousel() {
   const [filmes, setFilmes] = useState([]);
 
@@ -42,6 +48,8 @@ export default function Carousel() {
     slidesToScroll: 4
   };
   return (
+    <>
+    <Title>Filmes em Alta</Title>
     <SliderBox>
       <Slider {...settings} style={{ width: "95%" }}>
         {filmes.map((item) => (
@@ -56,5 +64,6 @@ export default function Carousel() {
         ))}
       </Slider>
     </SliderBox>
+    </>
   );
 }

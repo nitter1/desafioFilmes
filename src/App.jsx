@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { createGlobalStyle } from "styled-components"
 import Header from "./components/Header/header.jsx"
 import Main from "./components/Main/main.jsx"
@@ -16,12 +16,13 @@ const GlobalStyle = createGlobalStyle`
 
 
 export default function App() {
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
-    <Header />
+    <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
     <Main />
     <Carousel />
-    <Filmes />
+    <Filmes searchQuery={searchQuery}/>
     <GlobalStyle />
     </>
   )

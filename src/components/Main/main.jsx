@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import * as S from "./main_style"
 export default function Main() {
@@ -27,6 +30,7 @@ export default function Main() {
     }
 
     return (
+        <>
         <S.ContainerMain background={fundo.map(item => item.poster)} id="main">
             {fundo.map(item => (
                 <S.BoxTitle>
@@ -34,8 +38,13 @@ export default function Main() {
                     <S.ReleaseTitle>Lançamento: {item.release_year}</S.ReleaseTitle>
                     <S.VoteTitle>Avaliação: {item.vote_average}/10</S.VoteTitle>
                     <S.OverviewTitle>Sinopse: {item.overview}</S.OverviewTitle>
+                    <S.ButtonDiv>
+                    <S.ButtonAssistir> <FontAwesomeIcon icon={faPlay} /> Assitir Agora </S.ButtonAssistir>
+                <S.ButtonTrailer> <FontAwesomeIcon icon={faFilm} /> Trailer </S.ButtonTrailer>
+                </S.ButtonDiv>
                 </S.BoxTitle>
             ))}
         </S.ContainerMain>
+        </>
     )
 }

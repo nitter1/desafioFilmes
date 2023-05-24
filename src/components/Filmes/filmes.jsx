@@ -6,9 +6,14 @@ export default function Filmes() {
     const [filmes, setFilmes] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
 
+
+
     useEffect(() => {
-        getFilmes(currentPage);
+        getFilmes(currentPage)
       }, [currentPage]);
+      
+
+
 
     const getFilmes = async (page) => {
         await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=34635a3c54d72514d08fd6979b14e222&language=pt-BR&page=${page}`).then(resposta => {
@@ -26,8 +31,9 @@ export default function Filmes() {
     }
 
 
-    return (    <>
-                <S.Container id="filmes">
+    return (<>
+        <S.Title>Filmes Populares</S.Title>
+        <S.Container id="filmes">
             {filmes.map((item, index) => (
                 <S.BoxFilms key={index}>
                     <img src={item.image} alt={item.title} />
@@ -35,15 +41,15 @@ export default function Filmes() {
                     <h5>{item.release_year}</h5>
                 </S.BoxFilms>
             ))}
-                    <div>
-      <button onClick={() => setCurrentPage((prevPage) => prevPage - 1)}>
-        Página Anterior
-      </button>
-      <button onClick={() => setCurrentPage((prevPage) => prevPage + 1)}>
-        Próxima Página
-      </button>
-    </div>
+            <S.DivButtons>
+                <S.Buttons onClick={() => setCurrentPage((prevPage) => prevPage - 1)}>
+                    Página Anterior
+                </S.Buttons>
+                <S.Buttons onClick={() => setCurrentPage((prevPage) => prevPage + 1)}>
+                    Próxima Página
+                </S.Buttons>
+            </S.DivButtons>
         </S.Container>
-        </>
+    </>
     )
 }

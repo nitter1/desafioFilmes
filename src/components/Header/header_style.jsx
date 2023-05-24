@@ -39,7 +39,7 @@ export const Ul = styled.ul`
         -webkit-text-stroke-width: 0.6px;
         -webkit-text-stroke-color: #000;
         font-size:1.5rem;
-        font-weight: 700;
+        font-weight: 800;
         font-family: "Open Sans", Tahoma, Verdana, sans-serif;
     }
 `
@@ -60,7 +60,7 @@ export const UlTwo = styled.ul`
         -webkit-text-stroke-width: 0.6px;
         -webkit-text-stroke-color: #000;
         font-size:1.5rem;
-        font-weight: 700;
+        font-weight: 800;
         font-family: "Open Sans", Tahoma, Verdana, sans-serif;
     }
 `
