@@ -30,7 +30,11 @@ export const Ul = styled.ul`
     width: 25%;
     li{
         list-style: none;
-        
+        transition: all 0.3s ease;
+        &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
     }
 
     a{
@@ -51,6 +55,11 @@ export const UlTwo = styled.ul`
     width: 20%;
     li{
         list-style: none;
+        transition: all 0.3s ease;
+        &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
         
     }
 
