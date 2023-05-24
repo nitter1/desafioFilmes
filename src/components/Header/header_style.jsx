@@ -31,6 +31,9 @@ export const Ul = styled.ul`
     li{
         list-style: none;
         transition: all 0.3s ease;
+        width: 40%;
+        display: flex;
+        justify-content: center;
         &:hover {
     transform: scale(1.05);
     cursor: pointer;
@@ -58,6 +61,9 @@ export const UlTwo = styled.ul`
     li{
         list-style: none;
         transition: all 0.3s ease;
+        width: 40%;
+        display: flex;
+        justify-content: center;
         &:hover {
     transform: scale(1.05);
     cursor: pointer;
