@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <S.HeaderContainer>
       <S.Logo>
-        <img src={Logo} alt="Logotipo" />
+        <a href="/"><img src={Logo} alt="Logotipo" /></a>
       </S.Logo>
       <S.NavItems>
         <S.Ul>
           <li>
-            <a href="#series">Series</a>
+            <a href="#">Series</a>
           </li>
           <li>
             <a href="#filmes">Filmes</a>

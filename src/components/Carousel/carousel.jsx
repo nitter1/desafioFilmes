@@ -21,7 +21,9 @@ color: white;
 const Title = styled.h2`
 color: white;
 background-color: black;
+padding-top: 2rem;
 padding-left: 1.5rem;
+padding-bottom: 25px;
 `
 
 export default function Carousel() {
