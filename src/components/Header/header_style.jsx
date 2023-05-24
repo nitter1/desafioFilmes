@@ -36,6 +36,7 @@ export const Ul = styled.ul`
     cursor: pointer;
     background: #5a5a5a;
     border-radius: 25px;
+    width: 25%;
   }
     }
 
@@ -63,6 +64,7 @@ export const UlTwo = styled.ul`
     cursor: pointer;
     background: #5a5a5a;
     border-radius: 25px;
+    width: 25%;
   }
         
     }
